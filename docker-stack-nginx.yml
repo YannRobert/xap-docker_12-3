@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  web_swarm:
+    image: xap123docker_web
+    networks:
+      ntwrk:
+    ports:
+      - 8090:80
+      
+networks:
+    ntwrk:
+
+
+        

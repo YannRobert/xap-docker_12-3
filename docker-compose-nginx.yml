@@ -1,0 +1,7 @@
+version: '3.3'
+services:
+  web:
+    build:
+      context: ./nginx-server
+    ports:
+      - 8090:80

@@ -1,0 +1,26 @@
+version: '3.3'
+services:
+  xap:
+    image: gigaspaces/xap-enterprise:12.3
+    environment:
+      - XAP_LICENSE=tryme
+    networks:
+      ntwrk:
+        aliases:
+          - xap
+    ports:
+      # XAP Manager: https://docs.gigaspaces.com/xap/12.3/admin/xap-manager.html
+      - 8090:8090
+      # Web Management Console: https://docs.gigaspaces.com/xap/12.3/admin/tools-web-ui.html
+      - 8099
+  #proxy:
+  #  build:
+  #    context: ./proxy-config
+  #  links:
+  #      - xap
+  #  ports:
+  #    - 8090:80
+      
+networks:
+    ntwrk:
+        
